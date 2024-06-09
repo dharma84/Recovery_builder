@@ -1,7 +1,17 @@
 name: Build recovery(twrp,shrp,pbrp)
 on:
   workflow_dispatch:
-
+  
+env:
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-8.0
+  DEVICE: a2corelte
+  DT_LINK: https://github.com/twrpdtgen/android_device_samsung_a2corelte/tree/a2coreltedd-user-8.1.0-OPR6-A260GDDSCAUJ1-release-keys
+  DT_PATH: device/samsung/a2corelte
+  TARGET: recoveryimage
+  BUILD: recovery
+  OT: omni_
+  TZ: Asia/nepal
+  
 jobs:
   build:
     runs-on: ubuntu-18.04
